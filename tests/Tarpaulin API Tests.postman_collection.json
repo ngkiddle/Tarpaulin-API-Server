@@ -1,0 +1,743 @@
+{
+	"info": {
+		"_postman_id": "ebb40e21-5be7-4ba7-bb85-774adc018a31",
+		"name": "Tarpaulin API Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "{courseid}",
+					"item": [
+						{
+							"name": "Get Course by ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWQ5YzM1MjJiZDk5ZjRmYzQ4NTkzMTYiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTEzMjk2NDEsImV4cCI6MTU5MTQxNjA0MX0.LqqlR4jjdaCJSwQyWj28_MeDqwvFndlwvTeF_x-LYXU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/courses/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"courses",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5ed9e1b8923a0100136a9d90",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a Course",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWRmMTdiM2YzNmE1NDFhZDNiZjg2ZTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTE2Nzg5NjQsImV4cCI6MTU5MTc2NTM2NH0.ck094ixgWCZXz7DMmUFyE-hoz2wmI7IFsGDMYbGAnzQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"title\": \"Cloud Application Dev\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/courses/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"courses",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5edf18318cb10d001ae809cf"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a Course",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWRmMTdiM2YzNmE1NDFhZDNiZjg2ZTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTE2Nzg5NjQsImV4cCI6MTU5MTc2NTM2NH0.ck094ixgWCZXz7DMmUFyE-hoz2wmI7IFsGDMYbGAnzQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/courses/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"courses",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5edf18318cb10d001ae809cf"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a Course's Students",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWQ5YzM1MjJiZDk5ZjRmYzQ4NTkzMTYiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTEzMjk2NDEsImV4cCI6MTU5MTQxNjA0MX0.LqqlR4jjdaCJSwQyWj28_MeDqwvFndlwvTeF_x-LYXU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/courses/:id/students",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"courses",
+										":id",
+										"students"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5edaad2a110b3000122a1b32"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Course's Assignments",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWRmMTdiM2YzNmE1NDFhZDNiZjg2ZTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTE2Nzg5NjQsImV4cCI6MTU5MTc2NTM2NH0.ck094ixgWCZXz7DMmUFyE-hoz2wmI7IFsGDMYbGAnzQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/courses/:id/assignments",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"courses",
+										":id",
+										"assignments"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5edf1a09a93f6f001337d552"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add a Student to a Course",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWRmMTdiM2YzNmE1NDFhZDNiZjg2ZTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTE2Nzg5NjQsImV4cCI6MTU5MTc2NTM2NH0.ck094ixgWCZXz7DMmUFyE-hoz2wmI7IFsGDMYbGAnzQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"add\": [\"5edf1cba7b5b08001213402a\"],\n\t\"remove\": []\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/courses/:id/students",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"courses",
+										":id",
+										"students"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5edf1a09a93f6f001337d552"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Course Roster",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWRmMTdiM2YzNmE1NDFhZDNiZjg2ZTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTE2Nzg5NjQsImV4cCI6MTU5MTc2NTM2NH0.ck094ixgWCZXz7DMmUFyE-hoz2wmI7IFsGDMYbGAnzQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/courses/:id/roster",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"courses",
+										":id",
+										"roster"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5edf1a09a93f6f001337d552"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/courses/?page=1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courses",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWRmMTdiM2YzNmE1NDFhZDNiZjg2ZTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTE2Nzg5NjQsImV4cCI6MTU5MTc2NTM2NH0.ck094ixgWCZXz7DMmUFyE-hoz2wmI7IFsGDMYbGAnzQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"subject\": \"CS\",\n\t\"number\": \"493\",\n\t\"title\": \"Cloud Application Development\",\n\t\"term\": \"spr20\",\n\t\"instructorId\": \"5edabd428651580012e4373c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/courses/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courses",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Add Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"max\",\n  \"email\": \"harkindo@oregonstate.edu\",\n  \"password\": \"hunter2\",\n  \"role\": \"student\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWRmMTdiM2YzNmE1NDFhZDNiZjg2ZTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTE2Nzg5NjQsImV4cCI6MTU5MTc2NTM2NH0.ck094ixgWCZXz7DMmUFyE-hoz2wmI7IFsGDMYbGAnzQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Max\",\n  \"email\": \"harkindo1@oregonstate.edu\",\n  \"password\": \"hunter2\",\n  \"role\": \"instructor\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log in as a student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"harkindo@oregonstate.edu\",\n  \"password\": \"hunter2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/login/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log in as an admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"ngkiddle@gmail.com\",\n  \"password\": \"pass\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user information",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWRmMTdiM2YzNmE1NDFhZDNiZjg2ZTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTE2Nzg5NjQsImV4cCI6MTU5MTc2NTM2NH0.ck094ixgWCZXz7DMmUFyE-hoz2wmI7IFsGDMYbGAnzQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5edf1cba7b5b08001213402a",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Assignments",
+			"item": [
+				{
+					"name": "{assignmentid}",
+					"item": [
+						{
+							"name": "Get assignment information",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/assignments/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"assignments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5edf1e347b5b080012134031",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete assignment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWRmMTdiM2YzNmE1NDFhZDNiZjg2ZTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTE2Nzg5NjQsImV4cCI6MTU5MTc2NTM2NH0.ck094ixgWCZXz7DMmUFyE-hoz2wmI7IFsGDMYbGAnzQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/assignments/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"assignments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5edf1e537b5b080012134032",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update assignment information",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWRmMTdiM2YzNmE1NDFhZDNiZjg2ZTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTE2Nzg5NjQsImV4cCI6MTU5MTc2NTM2NH0.ck094ixgWCZXz7DMmUFyE-hoz2wmI7IFsGDMYbGAnzQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"api project\",\n  \"points\": 50,\n  \"due\": \"2019-06-14T17:00:00-07:00\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/assignments/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"assignments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5edf1e537b5b080012134032",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Post a new assignment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWRmMTdiM2YzNmE1NDFhZDNiZjg2ZTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTE2Nzg5NjQsImV4cCI6MTU5MTc2NTM2NH0.ck094ixgWCZXz7DMmUFyE-hoz2wmI7IFsGDMYbGAnzQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"courseId\": \"5edf1a09a93f6f001337d552\",\n  \"title\": \"api project\",\n  \"points\": 100,\n  \"due\": \"2019-06-14T17:00:00-07:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/assignments",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"assignments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload submission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWRmMWNiYTdiNWIwODAwMTIxMzQwMmEiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTU5MTY4MDczNSwiZXhwIjoxNTkxNzY3MTM1fQ.aV1PBEizKhpmOkn_7XszxlAQ-N6XmCFvROeTOAsXayM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/nick/Documents/OSU/cs463/CyVerseAppBuildGuide.pdf"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/assignments/:id/submissions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"assignments",
+								":id",
+								"submissions"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5edf1e537b5b080012134032",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get submissions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWRmMTdiM2YzNmE1NDFhZDNiZjg2ZTIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTE2Nzg5NjQsImV4cCI6MTU5MTc2NTM2NH0.ck094ixgWCZXz7DMmUFyE-hoz2wmI7IFsGDMYbGAnzQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/assignments/:id/submissions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"assignments",
+								":id",
+								"submissions"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5edf1e537b5b080012134032",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
